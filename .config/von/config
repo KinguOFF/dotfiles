@@ -1,0 +1,33 @@
+# vim: ft=yaml
+# This is an example of a VON config file
+# Please edit it to suit your needs
+
+# REQUIRED: Choose the default author for generated TeX files.
+# (You should probably put your name here)
+name: "Luca Fujii"
+
+# REQUIRED: Path to folder where you want to store your VON database
+# You can include "~" which gets expanded to your home directory
+# Make sure this folder exists!
+base_path: "~/Documents/vondb/"
+
+# REQUIRED: A list of sort tags
+# These particular tags are used for sorting and are highlighted differently.
+# Specify them however you want. Should be in increasing order.
+tags: ["trivial", "easy", "medium", "hard", "brutal"]
+
+# If your terminal sucks and doesn't have color sequences (e.g. you are using Windows)
+# then you should uncomment this option and change it to false
+# color: true
+
+# The following text is placed as you do editing
+# in order to help you remember which tags you have.
+# tag_hint_text: ""
+
+# By default your OS is autodetected
+# If this fails for some reason, you can set it to `windows`, `mac`, or `linux` below
+# os: linux
+
+# Name of text editor to invoke
+# By default, it detects from $EDITOR automatically
+# editor: vim
