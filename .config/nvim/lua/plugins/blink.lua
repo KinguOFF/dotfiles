@@ -80,6 +80,9 @@ return {
       ["<C-l>"] = { "snippet_forward", "fallback" },
       ["<C-h>"] = { "snippet_backward", "fallback" },
 
+      ["<Up>"] = {},
+      ["<Down>"] = {},
+
       ["<C-space>"] = { "show", "show_documentation", "hide_documentation" },
       ["<C-e>"] = { "hide", "fallback" },
 
