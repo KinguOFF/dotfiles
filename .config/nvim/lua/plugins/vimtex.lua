@@ -9,6 +9,6 @@ return {
     }
   end,
   keys = {
-    { "\\V", "", desc = "Vimtex" },
+    { "\\l", "", desc = "Vimtex" },
   },
 }
