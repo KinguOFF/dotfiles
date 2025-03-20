@@ -8,4 +8,7 @@ return {
       colorscheme = "catppuccin",
     },
   },
+  {
+    "norcalli/nvim-colorizer.lua",
+  },
 }

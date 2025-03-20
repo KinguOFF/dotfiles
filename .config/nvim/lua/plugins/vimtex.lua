@@ -8,7 +8,4 @@ return {
       out_dir = "./.latexmk/out",
     }
   end,
-  keys = {
-    { "\\l", "", desc = "Vimtex" },
-  },
 }
