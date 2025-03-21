@@ -7,6 +7,7 @@ return {
       load = {
         ["core.defaults"] = {},
         ["core.concealer"] = { config = { icon_preset = "diamond" } },
+        ["core.latex.renderer"] = {},
         ["core.dirman"] = {
           config = {
             workspaces = {
