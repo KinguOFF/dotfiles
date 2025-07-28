@@ -19,6 +19,7 @@ fish_history.txt
 
 # Ignore fish variables (state files)
 fish_variables
+.fish_variables
 
 # Ignore transient session files
 session.fish
