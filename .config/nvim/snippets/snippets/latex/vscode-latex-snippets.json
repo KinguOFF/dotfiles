@@ -1,6 +1,6 @@
 {
   "Template": {
-    "prefix": ["template", "\\template"],
+    "prefix": ["bgnDoc", "\\template"],
     "body": [
       "%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Define Article %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%",
       "\\documentclass[11pt]{scrartcl}",
@@ -12,7 +12,7 @@
       "",
       "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Title & Author %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%",
       "\\title{${1:Title}}",
-      "\\author{${Luca Fujii}}",
+      "\\author{Luca Fujii}",
       "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%",
       "",
       "\\begin{document}",

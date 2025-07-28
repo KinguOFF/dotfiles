@@ -1,0 +1,30 @@
+# Ignore all swap and temporary files
+*.swp
+*.tmp
+*~
+
+# Ignore fish history
+fish_history
+fish_history.txt
+.fish_history
+.fish_history*
+
+# Ignore fish compiled bytecode (if any)
+*.fishc
+
+# Ignore backup files
+*.bak
+*.backup
+*.old
+
+# Ignore fish variables (state files)
+fish_variables
+
+# Ignore transient session files
+session.fish
+fishd.*
+
+# Ignore any lock or cache files
+*.lock
+.cache/
+

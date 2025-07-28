@@ -2,3 +2,6 @@ map D set "first-page-column 1:1"
 map <C-d> set "first-page-column 1:2"
 
 set selection-clipboard clipboard
+map <C-l> feedkeys ":blist <Tab>"
+map <C-m> feedkeys ":bmark"
+

@@ -67,6 +67,8 @@ run_cmd() {
       systemctl poweroff
     elif [[ $1 == '--reboot' ]]; then
       systemctl reboot
+    elif [[ $1 == '--lock' ]]; then
+      loginctl lock-session
     elif [[ $1 == '--hibernate' ]]; then
       systemctl hibernate
     elif [[ $1 == '--suspend' ]]; then
@@ -111,6 +113,7 @@ $lock)
   elif [[ -x '/usr/bin/hyprlock' ]]; then
     hyprlock
   fi
+  loginctl lock-session
   ;;
 $suspend)
   run_cmd --suspend

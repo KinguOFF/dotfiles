@@ -22,7 +22,7 @@ tags: ["trivial", "easy", "medium", "hard", "brutal"]
 
 # The following text is placed as you do editing
 # in order to help you remember which tags you have.
-# tag_hint_text: ""
+#tag_hint_text: ""
 
 # By default your OS is autodetected
 # If this fails for some reason, you can set it to `windows`, `mac`, or `linux` below
@@ -30,4 +30,4 @@ tags: ["trivial", "easy", "medium", "hard", "brutal"]
 
 # Name of text editor to invoke
 # By default, it detects from $EDITOR automatically
-# editor: vim
+editor: nvim
