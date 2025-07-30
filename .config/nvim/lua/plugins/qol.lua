@@ -45,5 +45,14 @@ return {
         config = function()
             vim.cmd("colorscheme kanagawa-wave")
         end
+    },
+    {
+        "jiaoshijie/undotree",
+        lazy = true,
+        dependencies = "nvim-lua/plenary.nvim",
+        config = true,
+        keys = { -- load the plugin only when using it's keybinding:
+            { "<leader>u", "<cmd>lua require('undotree').toggle()<cr>" },
+        },
     }
 }
