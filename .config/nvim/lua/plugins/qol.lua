@@ -1,7 +1,9 @@
 return {
     {
         "stevearc/oil.nvim",
-        opts = {},
+        opts = {
+            skip_confirm_for_simple_edits = true,
+        },
         dependencies = {
             { "echasnovski/mini.icons", opts = {} },
         },
@@ -54,5 +56,8 @@ return {
         keys = { -- load the plugin only when using it's keybinding:
             { "<leader>u", "<cmd>lua require('undotree').toggle()<cr>" },
         },
+    },
+    {
+        "github/copilot.vim",
     }
 }
