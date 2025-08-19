@@ -1,0 +1,20 @@
+# ~/.config/uwsm/env
+
+# Toolkits
+export GDK_BACKEND="wayland,x11,*"        # GTK: prefer Wayland, fall back to X11 then anything
+export QT_QPA_PLATFORM="wayland;xcb"      # Qt: prefer Wayland, fall back to X11
+export SDL_VIDEODRIVER="wayland"
+export CLUTTER_BACKEND="wayland"
+
+# Qt scaling (optional; Qt ≥5.14 also supports QT_ENABLE_HIGHDPI_SCALING=1)
+export QT_AUTO_SCREEN_SCALE_FACTOR=1
+
+# Qt platform theme: pick ONE that matches what you installed
+# If you use qt6ct:
+# export QT_QPA_PLATFORMTHEME="qt6ct"
+# If you use qt5ct (often works for both Qt5/Qt6 on many setups):
+export QT_QPA_PLATFORMTHEME="qt5ct"
+
+export GTK_IM_MODULE="fcitx"
+export XMODIFIERS="@im=fcitx"
+

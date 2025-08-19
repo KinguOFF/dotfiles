@@ -1,0 +1,22 @@
+[[plugin.deps]]
+use = "yazi-rs/plugins:piper"
+rev = "e95c7b3"
+hash = "2143a53182dbbe935a1abd1623424aa5"
+
+[[plugin.deps]]
+use = "wylie102/duckdb"
+rev = "3f8c863"
+hash = "87b9233a74325e95011670ed20bbd0d4"
+
+[[plugin.deps]]
+use = "boydaihungst/mediainfo"
+rev = "0e2ae47"
+hash = "6656f2869ae2274a0e1860876f15186f"
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:full-border"
+rev = "e95c7b3"
+hash = "3996fc74044bc44144b323686f887e1"
+
+[flavor]
+deps = []
