@@ -1,0 +1,25 @@
+[Default Applications]
+application/pdf=org.pwmt.zathura.desktop
+image/jpeg=imv.desktop
+image/png=imv.desktop
+image/webp=imv.desktop
+image/gif=imv.desktop
+image/tiff=imv.desktop
+image/bmp=imv.desktop
+video/x-matroska=mpv.desktop
+video/mp4=mpv.desktop
+video/webm=mpv.desktop
+audio/flac=mpv.desktop
+audio/ogg=mpv.desktop
+audio/opus=mpv.desktop
+audio/x-wav=mpv.desktop
+audio/mpeg=mpv.desktop
+audio/mp4=mpv.desktop
+image/vnd.djvu=org.pwmt.zathura.desktop
+image/x-djvu=org.pwmt.zathura.desktop
+x-scheme-handler/discord=vesktop.desktop
+text/html=librewolf.desktop
+x-scheme-handler/http=librewolf.desktop
+x-scheme-handler/https=librewolf.desktop
+x-scheme-handler/ftp=librewolf.desktop
+x-scheme-handler/unknown=librewolf.desktop

@@ -15,6 +15,5 @@ export QT_AUTO_SCREEN_SCALE_FACTOR=1
 # If you use qt5ct (often works for both Qt5/Qt6 on many setups):
 export QT_QPA_PLATFORMTHEME="qt5ct"
 
-export GTK_IM_MODULE="fcitx"
 export XMODIFIERS="@im=fcitx"
 

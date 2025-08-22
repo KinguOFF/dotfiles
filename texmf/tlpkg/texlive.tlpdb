@@ -1,0 +1,41 @@
+name 00texlive.installation
+category TLCore
+revision 69982
+shortdesc TeX Live configuration settings
+longdesc This package serves on an installed system as a configuration
+longdesc file. We have to remember these settings for additional package
+longdesc installation, removal, etc. There are two types here: 1) If the
+longdesc key starts with opt_ this is an option that can be set by the
+longdesc user either at installation time or via tlmgr later. 2) If the
+longdesc key starts with setting_ this value cannot be changed by the
+longdesc user directly with tlmgr, but only by other actions. Currently
+longdesc there are only two settings supported, and the second is only
+longdesc used in unusual cases: 2a) setting_available_architectures
+longdesc lists all available platforms and should be always present 2b)
+longdesc setting_platform *overrides* the auto-detected platform. This
+longdesc value will only be present when you forced a specific
+longdesc architecture with -force-arch to install-tl The value of
+longdesc __MASTER__ for the location field tells the installer to use
+longdesc the present directory itself. For example, the DVD can be
+longdesc mounted anywhere and we want the installer to work. Concerning
+longdesc the 00* names: All packages starting with 00texlive are
+longdesc ``virtual packages'', in the sense that no containers are
+longdesc generated and these packages are never split into .src and .doc
+longdesc sub-packages in the tlpdb.
+depend opt_autobackup:1
+depend opt_backupdir:tlpkg/backups
+depend opt_create_formats:1
+depend opt_desktop_integration:1
+depend opt_file_assocs:1
+depend opt_generate_updmap:0
+depend opt_install_docfiles:1
+depend opt_install_srcfiles:1
+depend opt_location:https://mirror.ctan.org/systems/texlive/tlnet
+depend opt_post_code:1
+depend opt_sys_bin:/usr/local/bin
+depend opt_sys_info:/usr/local/share/info
+depend opt_sys_man:/usr/local/share/man
+depend opt_w32_multi_user:1
+depend setting_available_architectures:
+depend setting_usertree:1
+

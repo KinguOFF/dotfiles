@@ -1,1 +1,2 @@
 export GTK_THEME=WhiteSur-Dark
+export HYPRSHOT_DIR=/home/kingu/Pictures/Prints/
