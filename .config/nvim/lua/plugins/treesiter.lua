@@ -51,12 +51,12 @@ return {
             lspconfig.clangd.setup({})
             lspconfig.lua_ls.setup({})
             lspconfig.jsonls.setup({})
-            lspconfig.pyright.setup({}) -- Python
-            lspconfig.bashls.setup({}) -- Shell (bash/sh)
-            lspconfig.fish_lsp.setup({}) -- Fish shell
-            -- lspconfig.texlab.setup({  })                         -- LaTeX
-            lspconfig.taplo.setup({}) -- TOML
-            lspconfig.yamlls.setup({}) -- YAML
+            lspconfig.pyright.setup({})
+            lspconfig.bashls.setup({})
+            lspconfig.fish_lsp.setup({})
+            lspconfig.taplo.setup({})
+            lspconfig.yamlls.setup({})
+            lspconfig.tinymist.setup({})
         end,
     }
 }
