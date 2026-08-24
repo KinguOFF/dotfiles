@@ -3,7 +3,7 @@ return {
         "nvim-treesitter/nvim-treesitter",
         config = function()
             require("nvim-treesitter.configs").setup({
-                ensure_installed = { "cpp", "python", "latex", "lua", "vim", "c", "vimdoc", "query" },
+                ensure_installed = { "cpp", "python", "latex", "lua", "vim", "c", "vimdoc", "query"},
                 auto_install = true,
                 highlight = {
                     enable = true,
@@ -46,17 +46,6 @@ return {
     {
         "neovim/nvim-lspconfig",
         config = function()
-            local lspconfig = require("lspconfig")
-            lspconfig.hyprls.setup({})
-            lspconfig.clangd.setup({})
-            lspconfig.lua_ls.setup({})
-            lspconfig.jsonls.setup({})
-            lspconfig.pyright.setup({})
-            lspconfig.bashls.setup({})
-            lspconfig.fish_lsp.setup({})
-            lspconfig.taplo.setup({})
-            lspconfig.yamlls.setup({})
-            lspconfig.tinymist.setup({})
         end,
     }
 }

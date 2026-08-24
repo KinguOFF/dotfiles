@@ -13,6 +13,7 @@ return {
                 },
                 ["core.autocommands"] = {},
                 ["core.highlights"] = {},
+                ["core.journal"] = {},
                 ["core.integrations.treesitter"] = {},
                 ["core.defaults"] = {
                     config = {},
