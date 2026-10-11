@@ -21,7 +21,11 @@ vim.opt.scrolloff = 999
 vim.opt.inccommand = "split"
 
 vim.opt.ignorecase = true
+vim.opt.smartcase = true
 vim.opt.termguicolors = true
+
+vim.opt.undofile = true
+vim.opt.signcolumn = "yes"
 
 vim.diagnostic.config({
     virtual_lines = true,

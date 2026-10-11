@@ -12,14 +12,9 @@ return {
             appearance = {
                 nerd_font_variant = 'mono'
             },
-            snippets = {
-                -- either preset:
-                preset = "luasnip", -- simplest
-                -- or explicit:
-                expand = function(snip) require("luasnip").lsp_expand(snip) end,
-            },
+            snippets = { preset = "luasnip" },
 
-            -- (Default) Only show the documentation popup when manually triggered
+            -- Show the documentation popup automatically
             completion = { documentation = { auto_show = true } },
 
             sources = {
@@ -39,8 +34,16 @@ return {
     {
         "L3MON4D3/LuaSnip",
         config = function()
-            require("luasnip.loaders.from_vscode").lazy_load({ paths = "~/.config/nvim/snippets" })
-            require("luasnip.loaders.from_lua").lazy_load({ paths = { "~/.config/nvim/lua/snippets/" } })
+            local config_dir = vim.fn.stdpath("config")
+            require("luasnip.loaders.from_vscode").lazy_load({ paths = config_dir .. "/snippets" })
+            require("luasnip.loaders.from_lua").lazy_load({ paths = { config_dir .. "/lua/snippets/" } })
+
+            vim.keymap.set({ "i", "s" }, "<Tab>", function()
+                local ls = require("luasnip")
+                if ls.expand_or_jumpable() then ls.expand_or_jump()
+                else vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes("<Tab>", true, true, true), "n", true)
+                end
+            end, { silent = true })
         end,
         version = "v2.*",
         build = "make install_jsregexp"

@@ -40,12 +40,6 @@
                     "all"
                 ],
                 "path": "./snippets/global.json"
-            },
-            {
-                "language": [
-                    "python"
-                ],
-                "path": "./snippets/python/comprehension.json"
             }
         ]
     }

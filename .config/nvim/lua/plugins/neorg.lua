@@ -2,6 +2,9 @@ return {
 
     "nvim-neorg/neorg",
     version = "*", -- Pin Neorg to the latest stable release
+    -- Load after nvim-treesitter so the norg parsers are on the runtimepath
+    -- when neorg checks for them
+    dependencies = { "nvim-treesitter/nvim-treesitter" },
     config = function()
         require("neorg").setup({
             load = {

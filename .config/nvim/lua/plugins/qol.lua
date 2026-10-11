@@ -4,9 +4,7 @@ return {
         opts = {
             skip_confirm_for_simple_edits = true,
         },
-        dependencies = {
-            { "echasnovski/mini.icons", opts = {} },
-        },
+        dependencies = { "echasnovski/mini.icons" },
         lazy = false,
     },
     {
@@ -40,22 +38,27 @@ return {
     {
         'nvim-lualine/lualine.nvim',
         opts = {},
-        dependencies = { 'nvim-tree/nvim-web-devicons' }
+        dependencies = { "echasnovski/mini.icons" },
+    },
+    {
+        "echasnovski/mini.icons",
+        lazy = true,
+        opts = {},
+        init = function()
+            -- Serve mini.icons to plugins that require nvim-web-devicons
+            package.preload["nvim-web-devicons"] = function()
+                require("mini.icons").mock_nvim_web_devicons()
+                return package.loaded["nvim-web-devicons"]
+            end
+        end,
     },
     {
         "rebelot/kanagawa.nvim",
+        lazy = false,
+        priority = 1000,
         config = function()
             vim.cmd("colorscheme kanagawa-wave")
         end
-    },
-    {
-        "jiaoshijie/undotree",
-        lazy = true,
-        dependencies = "nvim-lua/plenary.nvim",
-        config = true,
-        keys = { -- load the plugin only when using it's keybinding:
-            { "<leader>u", "<cmd>lua require('undotree').toggle()<cr>", desc = "undotree" },
-        },
     },
     {
         "github/copilot.vim",
