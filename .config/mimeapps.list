@@ -23,3 +23,7 @@ x-scheme-handler/http=librewolf.desktop
 x-scheme-handler/https=librewolf.desktop
 x-scheme-handler/ftp=librewolf.desktop
 x-scheme-handler/unknown=librewolf.desktop
+x-scheme-handler/freetube=freetube.desktop
+x-scheme-handler/claude-cli=claude-code-url-handler.desktop
+
+[Added Associations]
