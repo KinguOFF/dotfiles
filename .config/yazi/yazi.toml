@@ -16,10 +16,3 @@
   # There are more extensions which are supported by mediainfo.
   # Just add file's MIME type to `previewers`, `preloaders` above.
   # https://mediaarea.net/en/MediaInfo/Support/Formats
-
-# For a large file like Adobe Illustrator, Adobe Photoshop, etc
-# you may need to increase the memory limit if no image is rendered.
-# https://yazi-rs.github.io/docs/configuration/yazi#tasks
-[tasks]
-  image_alloc      = 1073741824        # = 1024*1024*1024 = 1024MB
-
