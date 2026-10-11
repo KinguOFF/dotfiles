@@ -6,14 +6,15 @@ return {
         require("neorg").setup({
             load = {
                 ["core.journal"] = {
-                    workspace = "notes"
+                    config = {
+                        workspace = "notes"
+                    },
                 },
                 ["core.summary"] = {},
                 ["core.esupports.metagen"] = {
                 },
                 ["core.autocommands"] = {},
                 ["core.highlights"] = {},
-                ["core.journal"] = {},
                 ["core.integrations.treesitter"] = {},
                 ["core.defaults"] = {
                     config = {},

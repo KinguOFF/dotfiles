@@ -5,7 +5,7 @@ vim.keymap.set("n", "<leader>dv", function()
 end, { desc = "Toggle virtual text diagnostics" })
 
 vim.keymap.set("n", "<leader>f", function()
-    vim.lsp.buf.format({ async = true })
+    vim.lsp.buf.format({ async = false })
     vim.cmd("write")
 end, { desc = "Format buffer with LSP" })
 
