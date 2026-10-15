@@ -27,6 +27,7 @@
   "tree-sitter-norg": { "branch": "main", "commit": "d7edfaf89198aab652c7a1f0f818196efedaccfb" },
   "tree-sitter-norg-meta": { "branch": "main", "commit": "729d4e54fb881ba0ddf0f925ec78401354c7c6db" },
   "typst.vim": { "branch": "main", "commit": "1d5436c0f55490893892441c0eca55e6cdf4916c" },
+  "vim-be-better": { "branch": "master", "commit": "60e0214598d9d0bac8253e8b53a72eace4af92d3" },
   "vimtex": { "branch": "master", "commit": "2f279775e5b73743973bf2b013791f8f1673d5ac" },
   "which-key.nvim": { "branch": "main", "commit": "3aab2147e74890957785941f0c1ad87d0a44c15a" }
 }

@@ -25,3 +25,43 @@ include bubblegum-256.theme
 #include solarized-light-256.theme
 #include no-color.theme
 
+
+# --- organization (2026-10-14) ---
+urgency.user.tag.focus.coefficient=8.0
+urgency.user.tag.someday.coefficient=-20.0
+report.today.description=Doing now: focus, started, due today/overdue
+report.today.columns=id,start.active,project,description.count,due.relative,urgency
+report.today.labels=ID,A,Project,Description,Due,Urg
+report.today.filter=status:pending -someday (+focus or +ACTIVE or due.before:tomorrow)
+report.today.sort=urgency-
+report.week.description=Due or scheduled this week
+report.week.columns=id,project,description.count,scheduled.relative,due.relative
+report.week.labels=ID,Project,Description,Sched,Due
+report.week.filter=status:pending -someday (due.before:now+7d or scheduled.before:now+7d)
+report.week.sort=due+,scheduled+
+report.board.description=All active work grouped by project
+report.board.columns=id,project,tags,description.count,due.relative,urgency
+report.board.labels=ID,Project,Tags,Description,Due,Urg
+report.board.filter=status:pending -someday
+report.board.sort=project+/,urgency-
+report.deadlines.description=Everything with a due date
+report.deadlines.columns=id,project,description.count,due,due.relative
+report.deadlines.labels=ID,Project,Description,Due,In
+report.deadlines.filter=status:pending due.any:
+report.deadlines.sort=due+
+report.backlog.description=Someday/maybe, by project
+report.backlog.columns=id,project,description.count,entry.age
+report.backlog.labels=ID,Project,Description,Age
+report.backlog.filter=status:pending +someday
+report.backlog.sort=project+/,entry+
+report.stale.description=Untouched for 14+ days (decide: do, defer, drop)
+report.stale.columns=id,project,description.count,modified.age
+report.stale.labels=ID,Project,Description,Untouched
+report.stale.filter=status:pending -someday modified.before:now-14d
+report.stale.sort=modified+
+default.command=today
+context.study.read=project:uni or project:indep
+context.study.write=project:uni
+context.life.read=project:life or project:chinese or project:dev
+context.life.write=project:life
+context=study
