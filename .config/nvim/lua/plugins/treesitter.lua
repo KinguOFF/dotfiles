@@ -1,6 +1,8 @@
 local ensure_installed = { "cpp", "python", "latex", "lua", "vim", "c", "vimdoc", "query", "markdown", "markdown_inline" }
 -- filetypes whose treesitter highlighting stays off (vimtex handles latex)
 local highlight_disable = { latex = true }
+-- filetypes that keep their own indentexpr (orgmode indents org itself)
+local indent_disable = { org = true }
 
 return {
     {
@@ -16,7 +18,7 @@ return {
                 if highlight_disable[lang] or not vim.api.nvim_buf_is_valid(buf) then
                     return
                 end
-                if pcall(vim.treesitter.start, buf, lang) then
+                if pcall(vim.treesitter.start, buf, lang) and not indent_disable[lang] then
                     vim.bo[buf].indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
                 end
             end
