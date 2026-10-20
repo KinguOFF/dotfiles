@@ -6,4 +6,4 @@ https://discreteanalysisjournal.com/feed
 https://www.advancesincombinatorics.com/feed
 https://scottaaronson.blog/?feed=rss2
 https://feeds.feedburner.com/FutilityCloset
-https://rss.arxiv.org/rss/math.CO
+"https://export.arxiv.org/api/query?search_query=(cat:math.CO+OR+cat:math.PR)+AND+(abs:extremal+OR+abs:Ramsey+OR+abs:Tur%C3%A1n+OR+abs:%22random+graph%22+OR+abs:%22random+graphs%22+OR+abs:%22probabilistic+method%22+OR+abs:hypergraph+OR+abs:%22sharp+threshold%22+OR+abs:%22hypergraph+container%22+OR+abs:%22regularity+lemma%22)&sortBy=submittedDate&sortOrder=descending&max_results=100" "~arXiv: extremal/prob" arxiv

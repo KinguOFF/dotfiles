@@ -1,0 +1,2 @@
+# keep at most 100 articles per feed (older ones are dropped from the cache)
+max-items 100
