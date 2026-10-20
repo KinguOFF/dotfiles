@@ -27,12 +27,5 @@ vim.opt.termguicolors = true
 vim.opt.undofile = true
 vim.opt.signcolumn = "yes"
 
-vim.diagnostic.config({
-    virtual_lines = true,
-    signs = true,      -- show signs in the gutter
-    underline = true,  -- underline the text with issues
-    update_in_insert = false,
-})
-
 vim.opt.conceallevel = 2
 vim.opt.textwidth = 80
