@@ -1,6 +1,7 @@
 return {
     {
         "neovim/nvim-lspconfig",
+        lazy = false, -- its lsp/*.lua configs must be on the rtp for vim.lsp.enable
     },
     {
         "folke/lazydev.nvim",

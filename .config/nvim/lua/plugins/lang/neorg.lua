@@ -1,10 +1,14 @@
 return {
 
     "nvim-neorg/neorg",
+    lazy = false, -- upstream advises against lazy-loading
     version = "*", -- Pin Neorg to the latest stable release
     -- Load after nvim-treesitter so the norg parsers are on the runtimepath
     -- when neorg checks for them
     dependencies = { "nvim-treesitter/nvim-treesitter" },
+    keys = {
+        { "<Leader>gO", "<cmd>Neorg toc<CR>", desc = "Neorg table of contents" },
+    },
     config = function()
         require("neorg").setup({
             load = {

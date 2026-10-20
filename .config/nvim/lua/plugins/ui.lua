@@ -1,7 +1,7 @@
 return {
     {
         "rebelot/kanagawa.nvim",
-        lazy = false,
+        lazy = false, -- colorscheme, loads before everything else
         priority = 1000,
         config = function()
             vim.cmd("colorscheme kanagawa-wave")
@@ -21,11 +21,13 @@ return {
     },
     {
         'nvim-lualine/lualine.nvim',
+        event = "VeryLazy",
         opts = {},
         dependencies = { "echasnovski/mini.icons" },
     },
     {
         "akinsho/bufferline.nvim",
+        event = "VeryLazy",
         opts = {
             highlights = {
                 buffer_selected = {

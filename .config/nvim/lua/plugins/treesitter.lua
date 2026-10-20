@@ -6,7 +6,7 @@ return {
     {
         "nvim-treesitter/nvim-treesitter",
         branch = "main",
-        lazy = false,
+        lazy = false, -- the main branch doesn't support lazy-loading
         build = ":TSUpdate",
         config = function()
             local ts = require("nvim-treesitter")
@@ -48,6 +48,7 @@ return {
     {
         "nvim-treesitter/nvim-treesitter-textobjects",
         branch = "main",
+        event = "VeryLazy",
         config = function()
             require("nvim-treesitter-textobjects").setup({
                 select = {

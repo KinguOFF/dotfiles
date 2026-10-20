@@ -1,6 +1,6 @@
 return {
     "lervag/vimtex",
-    lazy = false,
+    lazy = false, -- vimtex docs: don't lazy-load
     init = function()
         vim.g.vimtex_syntax_custom_envs = {
             {

@@ -2,6 +2,7 @@ return {
     {
         'saghen/blink.cmp',
         event = "InsertEnter",
+        dependencies = { "L3MON4D3/LuaSnip" },
 
         version = '1.*',
         ---@module 'blink.cmp'
@@ -33,6 +34,7 @@ return {
     },
     {
         "L3MON4D3/LuaSnip",
+        lazy = true, -- loaded by blink.cmp
         config = function()
             local config_dir = vim.fn.stdpath("config")
             require("luasnip.loaders.from_vscode").lazy_load({ paths = config_dir .. "/snippets" })
