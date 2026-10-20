@@ -35,7 +35,7 @@ which runs **before** lazy, so plugin keymaps see the right leader.
 | `treesitter.lua`  | Parsers, highlighting, text objects                               |
 | `lsp.lua`         | LSP server configs, Lua dev types                                 |
 | `completion.lua`  | Completion menu, snippet engine, AI completion                    |
-| `lang/<lang>.lua` | Everything for one language: `tex`, `typst`, `lean`, `neorg`, `org` |
+| `lang/<lang>.lua` | Everything for one language: `tex`, `typst`, `lean`, `neorg`      |
 
 `:Lazy` lists every plugin; `grep -r <name> lua/plugins` finds its file.
 
@@ -194,27 +194,6 @@ in the spec's `init`. Infoview toggle: `<LocalLeader>i` (`\i`).
   it Neorg sometimes warns "norg treesitter parser was not found" at startup
   even though the parser works.
 
-### Notes — org-roam (trial, alongside Neorg)
-- Spec: `lang/org.lua` — orgmode `0.7.*` + org-roam.nvim `0.2.*`. org-roam
-  0.2 needs orgmode ≥ 0.7.0; check the version table in org-roam's README
-  before letting orgmode move past 0.7.
-- Notes live in `~/projects/roam` (`roam_dir` at the top of the spec), dailies
-  in `daily/`. The orgmode agenda reads the same folder; `<leader>oc` captures
-  into `inbox.org` there.
-- org-roam loads on `VeryLazy` (global `<leader>n…` keys) **and** `ft = "org"`:
-  it adds its org-buffer keys on `FileType`, so without the `ft` trigger
-  `nvim note.org` would open without them. orgmode loads as its dependency.
-- Keys: `<leader>nf` find/create, `<leader>nc` capture, `<leader>ni` insert
-  link, `<leader>nl` backlinks buffer, `<leader>ndn` today's daily,
-  `<leader>oo` follow link, `<leader>oa` agenda. Full table in the
-  "Org-roam cheatsheet" note.
-- Database cache: `~/.local/share/nvim/org-roam.nvim/db`. `:RoamReset` wipes
-  and rebuilds it.
-- orgmode builds its own tree-sitter-org parser on first use (needs a C
-  compiler); nvim-treesitter doesn't manage it. `:checkhealth orgmode` if
-  highlighting breaks.
-- Tutorial PDF: `~/Documents/nvim-org-roam-tutorial.pdf`.
-
 ### Treesitter
 - On the `main` branch (`require("nvim-treesitter")` API), which doesn't
   support lazy-loading, so it loads at startup.
@@ -222,9 +201,7 @@ in the spec's `init`. Infoview toggle: `<LocalLeader>i` (`\i`).
   startup. Opening a filetype whose parser is available but missing installs
   it (the old `auto_install`).
 - Highlighting and treesitter indent start on `FileType`. LaTeX highlighting
-  is off on purpose (`highlight_disable`; vimtex does it). Org keeps
-  orgmode's own `indentexpr` (`indent_disable`) — the treesitter one has no
-  org rules and puts everything at column 0.
+  is off on purpose (`highlight_disable`; vimtex does it).
 - Incremental selection uses Neovim 0.12's built-in `an`/`in`: `<leader>is`
   start, `<leader>si` grow, `<leader>sd` shrink.
 - Text objects (nvim-treesitter-textobjects, loads on `VeryLazy`): `af`/`if`

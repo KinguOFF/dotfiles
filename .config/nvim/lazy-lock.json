@@ -21,8 +21,6 @@
   "nvim-treesitter": { "branch": "main", "commit": "1a4f47b03dfe92d28de7d5654c67327ef008c9e6" },
   "nvim-treesitter-textobjects": { "branch": "main", "commit": "5c7b0263797dfd1bd6202f2b219f3b53a80b2187" },
   "oil.nvim": { "branch": "master", "commit": "b73018b75affd13fa38e2fc94ef753b465f770d7" },
-  "org-roam.nvim": { "branch": "main", "commit": "34d1d113cd139ea903125305310be3d7c1067484" },
-  "orgmode": { "branch": "master", "commit": "359538284a21c1edac20cb8a0b6b772ca098098e" },
   "pathlib.nvim": { "branch": "main", "commit": "a0d3dbbe00ce6a546426b1aed3838a82fe6bfc42" },
   "plenary.nvim": { "branch": "master", "commit": "74b06c6c75e4eeb3108ec01852001636d85a932b" },
   "todo-comments.nvim": { "branch": "main", "commit": "31e3c38ce9b29781e4422fc0322eb0a21f4e8668" },
