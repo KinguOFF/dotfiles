@@ -76,7 +76,4 @@ return {
             end
         end,
     },
-    {
-        "neovim/nvim-lspconfig",
-    }
 }

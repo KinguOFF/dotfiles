@@ -47,5 +47,9 @@ return {
         end,
         version = "v2.*",
         build = "make install_jsregexp"
-    }
+    },
+    {
+        "github/copilot.vim",
+        enabled = false,
+    },
 }
