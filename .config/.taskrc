@@ -64,4 +64,4 @@ context.study.read=project:uni or project:indep
 context.study.write=project:uni
 context.life.read=project:life or project:chinese or project:dev
 context.life.write=project:life
-context=study
+context=life
